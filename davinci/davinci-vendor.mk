@@ -7,6 +7,8 @@ PRODUCT_SOONG_NAMESPACES += \
 
 PRODUCT_COPY_FILES += \
     vendor/asus/davinci/proprietary/system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.hotwordenrollment.common.util.xml \
+    vendor/asus/davinci/proprietary/system_ext/lib64/libmmosal.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmmosal.so \
+    vendor/asus/davinci/proprietary/system_ext/lib64/libmmparser_lite.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmmparser_lite.so \
     vendor/asus/davinci/proprietary/vendor/bin/ATFWD-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/ATFWD-daemon \
     vendor/asus/davinci/proprietary/vendor/bin/adpl:$(TARGET_COPY_OUT_VENDOR)/bin/adpl \
     vendor/asus/davinci/proprietary/vendor/bin/adsprpcd:$(TARGET_COPY_OUT_VENDOR)/bin/adsprpcd \
@@ -31,10 +33,10 @@ PRODUCT_COPY_FILES += \
     vendor/asus/davinci/proprietary/vendor/bin/hw/android.hardware.keymaster@4.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.keymaster@4.0-service-qti \
     vendor/asus/davinci/proprietary/vendor/bin/hw/android.hardware.keymaster@4.0-strongbox-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.keymaster@4.0-strongbox-service-qti \
     vendor/asus/davinci/proprietary/vendor/bin/hw/android.hardware.keymaster@4.1-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.keymaster@4.1-service-qti \
-    vendor/asus/davinci/proprietary/vendor/bin/hw/android.hardware.media.omx@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.media.omx@1.0-service \
     vendor/asus/davinci/proprietary/vendor/bin/hw/android.hardware.neuralnetworks-shim-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.neuralnetworks-shim-service-qti \
     vendor/asus/davinci/proprietary/vendor/bin/hw/android.hardware.nfc@1.2-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.nfc@1.2-service \
     vendor/asus/davinci/proprietary/vendor/bin/hw/android.hardware.security.keymint-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.security.keymint-service-qti \
+    vendor/asus/davinci/proprietary/vendor/bin/hw/qconfigservice:$(TARGET_COPY_OUT_VENDOR)/bin/hw/qconfigservice \
     vendor/asus/davinci/proprietary/vendor/bin/hw/qcrilNrd:$(TARGET_COPY_OUT_VENDOR)/bin/hw/qcrilNrd \
     vendor/asus/davinci/proprietary/vendor/bin/hw/vendor.display.color@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.display.color@1.0-service \
     vendor/asus/davinci/proprietary/vendor/bin/hw/vendor.pixelworks.hardware.display.iris-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.pixelworks.hardware.display.iris-service \
@@ -48,9 +50,12 @@ PRODUCT_COPY_FILES += \
     vendor/asus/davinci/proprietary/vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service \
     vendor/asus/davinci/proprietary/vendor/bin/hw/vendor.qti.hardware.trustedui@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.trustedui@1.0-service-qti \
     vendor/asus/davinci/proprietary/vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti \
+    vendor/asus/davinci/proprietary/vendor/bin/hw/vendor.qti.media.c2@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.media.c2@1.0-service \
+    vendor/asus/davinci/proprietary/vendor/bin/hw/vendor.qti.media.c2audio@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.media.c2audio@1.0-service \
     vendor/asus/davinci/proprietary/vendor/bin/ims_rtp_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/ims_rtp_daemon \
     vendor/asus/davinci/proprietary/vendor/bin/imsdaemon:$(TARGET_COPY_OUT_VENDOR)/bin/imsdaemon \
     vendor/asus/davinci/proprietary/vendor/bin/init.qcom.sensors.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.sensors.sh \
+    vendor/asus/davinci/proprietary/vendor/bin/init.qti.media.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.media.sh \
     vendor/asus/davinci/proprietary/vendor/bin/init.qti.qcv.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.qcv.sh \
     vendor/asus/davinci/proprietary/vendor/bin/init.qti.write.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.write.sh \
     vendor/asus/davinci/proprietary/vendor/bin/ipacm-diag:$(TARGET_COPY_OUT_VENDOR)/bin/ipacm-diag \
@@ -196,7 +201,6 @@ PRODUCT_COPY_FILES += \
     vendor/asus/davinci/proprietary/vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc \
     vendor/asus/davinci/proprietary/vendor/etc/init/android.hardware.identity-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.identity-service-qti.rc \
     vendor/asus/davinci/proprietary/vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@4.1-service-qti.rc \
-    vendor/asus/davinci/proprietary/vendor/etc/init/android.hardware.media.omx@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.media.omx@1.0-service.rc \
     vendor/asus/davinci/proprietary/vendor/etc/init/android.hardware.neuralnetworks-shim-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks-shim-service-qti.rc \
     vendor/asus/davinci/proprietary/vendor/etc/init/android.hardware.nfc@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.nfc@1.2-service.rc \
     vendor/asus/davinci/proprietary/vendor/etc/init/android.hardware.security.keymint-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint-service-qti.rc \
@@ -207,6 +211,7 @@ PRODUCT_COPY_FILES += \
     vendor/asus/davinci/proprietary/vendor/etc/init/feature_enabler_client.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/feature_enabler_client.rc \
     vendor/asus/davinci/proprietary/vendor/etc/init/ims_rtp_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ims_rtp_daemon.rc \
     vendor/asus/davinci/proprietary/vendor/etc/init/imsdaemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/imsdaemon.rc \
+    vendor/asus/davinci/proprietary/vendor/etc/init/init.qti.media.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qti.media.rc \
     vendor/asus/davinci/proprietary/vendor/etc/init/init.qti.qcv.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qti.qcv.rc \
     vendor/asus/davinci/proprietary/vendor/etc/init/init.time_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.time_daemon.rc \
     vendor/asus/davinci/proprietary/vendor/etc/init/init.vendor.sensors.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.sensors.rc \
@@ -219,6 +224,7 @@ PRODUCT_COPY_FILES += \
     vendor/asus/davinci/proprietary/vendor/etc/init/mutualex.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/mutualex.rc \
     vendor/asus/davinci/proprietary/vendor/etc/init/netmgrd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/netmgrd.rc \
     vendor/asus/davinci/proprietary/vendor/etc/init/port-bridge.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/port-bridge.rc \
+    vendor/asus/davinci/proprietary/vendor/etc/init/qconfig.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qconfig.rc \
     vendor/asus/davinci/proprietary/vendor/etc/init/qcrilNrd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qcrilNrd.rc \
     vendor/asus/davinci/proprietary/vendor/etc/init/qdcmss.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qdcmss.rc \
     vendor/asus/davinci/proprietary/vendor/etc/init/qesdk-manager.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qesdk-manager.rc \
@@ -244,6 +250,8 @@ PRODUCT_COPY_FILES += \
     vendor/asus/davinci/proprietary/vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc \
     vendor/asus/davinci/proprietary/vendor/etc/init/vendor.qti.hardware.trustedui@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.trustedui@1.0-service-qti.rc \
     vendor/asus/davinci/proprietary/vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc \
+    vendor/asus/davinci/proprietary/vendor/etc/init/vendor.qti.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.media.c2@1.0-service.rc \
+    vendor/asus/davinci/proprietary/vendor/etc/init/vendor.qti.media.c2audio@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.media.c2audio@1.0-service.rc \
     vendor/asus/davinci/proprietary/vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.qspmhal@1.0-service.rc \
     vendor/asus/davinci/proprietary/vendor/etc/init/vendor.qti.rmt_storage.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.rmt_storage.rc \
     vendor/asus/davinci/proprietary/vendor/etc/init/vendor.qti.tftp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.tftp.rc \
@@ -328,6 +336,12 @@ PRODUCT_COPY_FILES += \
     vendor/asus/davinci/proprietary/vendor/etc/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
     vendor/asus/davinci/proprietary/vendor/etc/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config \
     vendor/asus/davinci/proprietary/vendor/etc/seccomp_policy/atfwd@2.0.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/atfwd@2.0.policy \
+    vendor/asus/davinci/proprietary/vendor/etc/seccomp_policy/c2audio.vendor.base-arm.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/c2audio.vendor.base-arm.policy \
+    vendor/asus/davinci/proprietary/vendor/etc/seccomp_policy/c2audio.vendor.base-arm64.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/c2audio.vendor.base-arm64.policy \
+    vendor/asus/davinci/proprietary/vendor/etc/seccomp_policy/c2audio.vendor.ext-arm.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/c2audio.vendor.ext-arm.policy \
+    vendor/asus/davinci/proprietary/vendor/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy \
+    vendor/asus/davinci/proprietary/vendor/etc/seccomp_policy/codec2.vendor.base-arm64.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.base-arm64.policy \
+    vendor/asus/davinci/proprietary/vendor/etc/seccomp_policy/codec2.vendor.ext-arm64.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.ext-arm64.policy \
     vendor/asus/davinci/proprietary/vendor/etc/seccomp_policy/imsrtp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/imsrtp.policy \
     vendor/asus/davinci/proprietary/vendor/etc/seccomp_policy/modemManager.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/modemManager.policy \
     vendor/asus/davinci/proprietary/vendor/etc/seccomp_policy/qcrilnr@2.0.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qcrilnr@2.0.policy \
@@ -578,6 +592,35 @@ PRODUCT_COPY_FILES += \
     vendor/asus/davinci/proprietary/vendor/firmware/widevine.b08:$(TARGET_COPY_OUT_VENDOR)/firmware/widevine.b08 \
     vendor/asus/davinci/proprietary/vendor/firmware/widevine.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/widevine.mbn \
     vendor/asus/davinci/proprietary/vendor/firmware/widevine.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/widevine.mdt \
+    vendor/asus/davinci/proprietary/vendor/lib/libQcelp13SwCodec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libQcelp13SwCodec.so \
+    vendor/asus/davinci/proprietary/vendor/lib/libfastcrc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libfastcrc.so \
+    vendor/asus/davinci/proprietary/vendor/lib/libqc2audio_base.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqc2audio_base.so \
+    vendor/asus/davinci/proprietary/vendor/lib/libqc2audio_basecodec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqc2audio_basecodec.so \
+    vendor/asus/davinci/proprietary/vendor/lib/libqc2audio_core.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqc2audio_core.so \
+    vendor/asus/davinci/proprietary/vendor/lib/libqc2audio_hooks.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqc2audio_hooks.so \
+    vendor/asus/davinci/proprietary/vendor/lib/libqc2audio_hwaudiocodec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqc2audio_hwaudiocodec.so \
+    vendor/asus/davinci/proprietary/vendor/lib/libqc2audio_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqc2audio_platform.so \
+    vendor/asus/davinci/proprietary/vendor/lib/libqc2audio_swaudiocodec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqc2audio_swaudiocodec.so \
+    vendor/asus/davinci/proprietary/vendor/lib/libqc2audio_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqc2audio_utils.so \
+    vendor/asus/davinci/proprietary/vendor/lib/libqc2colorconvertfilter.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqc2colorconvertfilter.so \
+    vendor/asus/davinci/proprietary/vendor/lib/libqc2filter.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqc2filter.so \
+    vendor/asus/davinci/proprietary/vendor/lib/libqc2vppfilter.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqc2vppfilter.so \
+    vendor/asus/davinci/proprietary/vendor/lib/libqcodec2_base.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqcodec2_base.so \
+    vendor/asus/davinci/proprietary/vendor/lib/libqcodec2_basecodec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqcodec2_basecodec.so \
+    vendor/asus/davinci/proprietary/vendor/lib/libqcodec2_core.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqcodec2_core.so \
+    vendor/asus/davinci/proprietary/vendor/lib/libqcodec2_filterbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqcodec2_filterbase.so \
+    vendor/asus/davinci/proprietary/vendor/lib/libqcodec2_hooks.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqcodec2_hooks.so \
+    vendor/asus/davinci/proprietary/vendor/lib/libqcodec2_mockfilter.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqcodec2_mockfilter.so \
+    vendor/asus/davinci/proprietary/vendor/lib/libqcodec2_mockqc2filter.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqcodec2_mockqc2filter.so \
+    vendor/asus/davinci/proprietary/vendor/lib/libqcodec2_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqcodec2_platform.so \
+    vendor/asus/davinci/proprietary/vendor/lib/libqcodec2_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqcodec2_utils.so \
+    vendor/asus/davinci/proprietary/vendor/lib/libqcodec2_v4l2codec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqcodec2_v4l2codec.so \
+    vendor/asus/davinci/proprietary/vendor/lib/libqconfigclient.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqconfigclient.so \
+    vendor/asus/davinci/proprietary/vendor/lib/libstreamparser.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstreamparser.so \
+    vendor/asus/davinci/proprietary/vendor/lib/libvideooptfeature.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvideooptfeature.so \
+    vendor/asus/davinci/proprietary/vendor/lib/libvideotxr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvideotxr.so \
+    vendor/asus/davinci/proprietary/vendor/lib/libvideoutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvideoutils.so \
+    vendor/asus/davinci/proprietary/vendor/lib/qti.video.utils.videobufferlayout.so:$(TARGET_COPY_OUT_VENDOR)/lib/qti.video.utils.videobufferlayout.so \
     vendor/asus/davinci/proprietary/vendor/lib/rfsa/adsp/bm2n00.bin:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/bm2n00.bin \
     vendor/asus/davinci/proprietary/vendor/lib/rfsa/adsp/bm2n01.bin:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/bm2n01.bin \
     vendor/asus/davinci/proprietary/vendor/lib/rfsa/adsp/bm2n02.bin:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/bm2n02.bin \
@@ -664,6 +707,7 @@ PRODUCT_COPY_FILES += \
     vendor/asus/davinci/proprietary/vendor/lib/rfsa/adsp/libvpp_ais_networks.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libvpp_ais_networks.so \
     vendor/asus/davinci/proprietary/vendor/lib/rfsa/adsp/libvpp_vqa_networks.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libvpp_vqa_networks.so \
     vendor/asus/davinci/proprietary/vendor/lib/rfsa/adsp/libvpt_action_recognition.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libvpt_action_recognition.so \
+    vendor/asus/davinci/proprietary/vendor/lib/vendor.qti.hardware.qconfig@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.qconfig@1.0.so \
     vendor/asus/davinci/proprietary/vendor/lib64/DataSet/arch/DIT_List.cfg:$(TARGET_COPY_OUT_VENDOR)/lib64/DataSet/arch/DIT_List.cfg \
     vendor/asus/davinci/proprietary/vendor/lib64/DataSet/cl/AlignMapping.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/DataSet/cl/AlignMapping.bin \
     vendor/asus/davinci/proprietary/vendor/lib64/DataSet/cl/lightart.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/DataSet/cl/lightart.bin \
@@ -885,6 +929,7 @@ PRODUCT_COPY_FILES += \
     vendor/asus/davinci/proprietary/vendor/lib64/libQSEEComAPI.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libQSEEComAPI.so \
     vendor/asus/davinci/proprietary/vendor/lib64/libQTEEConnector_listener.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libQTEEConnector_listener.so \
     vendor/asus/davinci/proprietary/vendor/lib64/libQTEEConnector_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libQTEEConnector_vendor.so \
+    vendor/asus/davinci/proprietary/vendor/lib64/libQcelp13SwCodec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libQcelp13SwCodec.so \
     vendor/asus/davinci/proprietary/vendor/lib64/libQnnGpu.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libQnnGpu.so \
     vendor/asus/davinci/proprietary/vendor/lib64/libQnnHtp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libQnnHtp.so \
     vendor/asus/davinci/proprietary/vendor/lib64/libQnnHtpPrepare.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libQnnHtpPrepare.so \
@@ -994,6 +1039,7 @@ PRODUCT_COPY_FILES += \
     vendor/asus/davinci/proprietary/vendor/lib64/libengineplugin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libengineplugin.so \
     vendor/asus/davinci/proprietary/vendor/lib64/libeva.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libeva.so \
     vendor/asus/davinci/proprietary/vendor/lib64/libeva_util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libeva_util.so \
+    vendor/asus/davinci/proprietary/vendor/lib64/libfastcrc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfastcrc.so \
     vendor/asus/davinci/proprietary/vendor/lib64/libfastcvdsp_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfastcvdsp_stub.so \
     vendor/asus/davinci/proprietary/vendor/lib64/libfmpal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfmpal.so \
     vendor/asus/davinci/proprietary/vendor/lib64/libgarden.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgarden.so \
@@ -1088,10 +1134,32 @@ PRODUCT_COPY_FILES += \
     vendor/asus/davinci/proprietary/vendor/lib64/libpwirisservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpwirisservice.so \
     vendor/asus/davinci/proprietary/vendor/lib64/libpwirissoft.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpwirissoft.so \
     vendor/asus/davinci/proprietary/vendor/lib64/libpwsoftirisPCS.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpwsoftirisPCS.so \
+    vendor/asus/davinci/proprietary/vendor/lib64/libqc2audio_base.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqc2audio_base.so \
+    vendor/asus/davinci/proprietary/vendor/lib64/libqc2audio_basecodec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqc2audio_basecodec.so \
+    vendor/asus/davinci/proprietary/vendor/lib64/libqc2audio_core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqc2audio_core.so \
+    vendor/asus/davinci/proprietary/vendor/lib64/libqc2audio_hooks.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqc2audio_hooks.so \
+    vendor/asus/davinci/proprietary/vendor/lib64/libqc2audio_hwaudiocodec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqc2audio_hwaudiocodec.so \
+    vendor/asus/davinci/proprietary/vendor/lib64/libqc2audio_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqc2audio_platform.so \
+    vendor/asus/davinci/proprietary/vendor/lib64/libqc2audio_swaudiocodec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqc2audio_swaudiocodec.so \
+    vendor/asus/davinci/proprietary/vendor/lib64/libqc2audio_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqc2audio_utils.so \
+    vendor/asus/davinci/proprietary/vendor/lib64/libqc2colorconvertfilter.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqc2colorconvertfilter.so \
+    vendor/asus/davinci/proprietary/vendor/lib64/libqc2filter.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqc2filter.so \
+    vendor/asus/davinci/proprietary/vendor/lib64/libqc2vppfilter.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqc2vppfilter.so \
     vendor/asus/davinci/proprietary/vendor/lib64/libqcbor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcbor.so \
     vendor/asus/davinci/proprietary/vendor/lib64/libqcc_file_agent.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcc_file_agent.so \
     vendor/asus/davinci/proprietary/vendor/lib64/libqcci_legacy.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcci_legacy.so \
     vendor/asus/davinci/proprietary/vendor/lib64/libqcmaputils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcmaputils.so \
+    vendor/asus/davinci/proprietary/vendor/lib64/libqcodec2_base.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcodec2_base.so \
+    vendor/asus/davinci/proprietary/vendor/lib64/libqcodec2_basecodec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcodec2_basecodec.so \
+    vendor/asus/davinci/proprietary/vendor/lib64/libqcodec2_core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcodec2_core.so \
+    vendor/asus/davinci/proprietary/vendor/lib64/libqcodec2_filterbase.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcodec2_filterbase.so \
+    vendor/asus/davinci/proprietary/vendor/lib64/libqcodec2_hooks.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcodec2_hooks.so \
+    vendor/asus/davinci/proprietary/vendor/lib64/libqcodec2_mockfilter.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcodec2_mockfilter.so \
+    vendor/asus/davinci/proprietary/vendor/lib64/libqcodec2_mockqc2filter.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcodec2_mockqc2filter.so \
+    vendor/asus/davinci/proprietary/vendor/lib64/libqcodec2_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcodec2_platform.so \
+    vendor/asus/davinci/proprietary/vendor/lib64/libqcodec2_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcodec2_utils.so \
+    vendor/asus/davinci/proprietary/vendor/lib64/libqcodec2_v4l2codec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcodec2_v4l2codec.so \
+    vendor/asus/davinci/proprietary/vendor/lib64/libqconfigclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqconfigclient.so \
     vendor/asus/davinci/proprietary/vendor/lib64/libqcrilDataModule.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcrilDataModule.so \
     vendor/asus/davinci/proprietary/vendor/lib64/libqcrilNr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcrilNr.so \
     vendor/asus/davinci/proprietary/vendor/lib64/libqcrilNrCellInfoModule.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqcrilNrCellInfoModule.so \
@@ -1199,6 +1267,9 @@ PRODUCT_COPY_FILES += \
     vendor/asus/davinci/proprietary/vendor/lib64/libtrustedapploader.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtrustedapploader.so \
     vendor/asus/davinci/proprietary/vendor/lib64/libubifocus.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libubifocus.so \
     vendor/asus/davinci/proprietary/vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so \
+    vendor/asus/davinci/proprietary/vendor/lib64/libvideooptfeature.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvideooptfeature.so \
+    vendor/asus/davinci/proprietary/vendor/lib64/libvideotxr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvideotxr.so \
+    vendor/asus/davinci/proprietary/vendor/lib64/libvideoutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvideoutils.so \
     vendor/asus/davinci/proprietary/vendor/lib64/libvidhance.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvidhance.so \
     vendor/asus/davinci/proprietary/vendor/lib64/libvidhance_active_ois.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvidhance_active_ois.so \
     vendor/asus/davinci/proprietary/vendor/lib64/libvidhance_dmbr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvidhance_dmbr.so \
@@ -1233,6 +1304,7 @@ PRODUCT_COPY_FILES += \
     vendor/asus/davinci/proprietary/vendor/lib64/qcrilNrQmiModule.so:$(TARGET_COPY_OUT_VENDOR)/lib64/qcrilNrQmiModule.so \
     vendor/asus/davinci/proprietary/vendor/lib64/qcrild_libqcrilnr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/qcrild_libqcrilnr.so \
     vendor/asus/davinci/proprietary/vendor/lib64/qcrild_libqcrilnrutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/qcrild_libqcrilnrutils.so \
+    vendor/asus/davinci/proprietary/vendor/lib64/qti.video.utils.videobufferlayout.so:$(TARGET_COPY_OUT_VENDOR)/lib64/qti.video.utils.videobufferlayout.so \
     vendor/asus/davinci/proprietary/vendor/lib64/qtiPeripheralMgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/qtiPeripheralMgr.so \
     vendor/asus/davinci/proprietary/vendor/lib64/qtiril-utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/qtiril-utils.so \
     vendor/asus/davinci/proprietary/vendor/lib64/qtiwakelock.so:$(TARGET_COPY_OUT_VENDOR)/lib64/qtiwakelock.so \
@@ -1318,6 +1390,7 @@ PRODUCT_COPY_FILES += \
     vendor/asus/davinci/proprietary/vendor/lib64/vendor.qti.hardware.qccsyshal@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.qccsyshal@1.1.so \
     vendor/asus/davinci/proprietary/vendor/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so \
     vendor/asus/davinci/proprietary/vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.qccvndhal@1.0.so \
+    vendor/asus/davinci/proprietary/vendor/lib64/vendor.qti.hardware.qconfig@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.qconfig@1.0.so \
     vendor/asus/davinci/proprietary/vendor/lib64/vendor.qti.hardware.qseecom@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.qseecom@1.0.so \
     vendor/asus/davinci/proprietary/vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.qteeconnector@1.0.so \
     vendor/asus/davinci/proprietary/vendor/lib64/vendor.qti.hardware.radio.am@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.am@1.0.so \
@@ -1404,6 +1477,8 @@ PRODUCT_PACKAGES += \
     com.android.hotwordenrollment.common.util \
     android.hardware.neuralnetworks-shim-service-qti \
     android.hardware.security.keymint-service-qti \
+    c2_manifest_vendor \
+    c2_manifest_vendor_audio \
     dataconnection-saidl \
     manifest_android.hardware.drm@1.4-service.widevine \
     manifest_lahaina_identity \
@@ -1415,5 +1490,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.diag.hal.service \
     vendor.qti.gnss-service \
     vendor.qti.hardware.limits-service \
+    vendor.qti.hardware.qconfig@1.0-service \
     vendor.qti.hardware.radio.ims \
     vendor.qti.hardware.vpp@2.0-service
