@@ -27,6 +27,12 @@ Pixelworks Inc. Company Confidential Strictly Private-->
 	<Folder>dc_only_base_measurement_non-hdr_panel_data_ai2202</Folder>
 </DataDimming>
 
+<!--HDR dc dimming by GC-->
+<DataDimming Id="100" Type="8" MaxLevel="4095" MaxValue="1023" MaxBacklight="1023" BrightnessMode="2">
+	<Length>4096</Length>
+	<Folder>hdr_gc_dc_dimming</Folder>
+</DataDimming>
+
 <GammaBlend Id="1" Type="8" MaxLevel="6" BrightnessMode="8">
 <Length>1024</Length>
 <Folder>gc_blend_offset_folder_ai2202</Folder>
